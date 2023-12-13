@@ -24,7 +24,7 @@ const Search = ({ Products }) => {
   const ViewSingleClickedProduct = (id) => {
     Products.filter((inp) => {
       if (inp.id === id) {
-        return ;
+        return id;
       }
     });
   };
@@ -143,7 +143,7 @@ const Search = ({ Products }) => {
                   />
                   <span
                     style={{ cursor: "pointer" }}
-                    onClick={ViewSingleClickedProduct}
+                    onClick={() => ViewSingleClickedProduct(input.id)}
                   >
                     {input.title}
                   </span>
