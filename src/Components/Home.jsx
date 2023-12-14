@@ -35,9 +35,27 @@ const Home = () => {
       <div style={{ margin: "20px", width: "100%" }}>
         <Search Products={ProductsState} />
       </div>
-      <div style={{display:"flex", justifyContent:"space-between",alignItems:"center"}}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          position: "sticky",
+        }}
+      >
         <CategoryFilter ProductsCategoryState={ProductsState} />
-       <span style={{marginRight:"5%",border:"1px solid gray",height:"5vh",width:"5vh",textAlign:"center",borderRadius:"8px"}}><FilterRange /></span> 
+        <span
+          style={{
+            marginRight: "5%",
+            border: "1px solid gray",
+            height: "5vh",
+            width: "5vh",
+            textAlign: "center",
+            borderRadius: "8px",
+          }}
+        >
+          <FilterRange />
+        </span>
       </div>
       <div
         style={{
@@ -52,7 +70,6 @@ const Home = () => {
           return (
             <div
               key={index}
-              className="ProductCard"
               style={{
                 marginLeft: "8%",
                 border: "none",
@@ -65,6 +82,7 @@ const Home = () => {
                 borderRadius: "20px",
                 boxShadow: "2px 2px 2px 2px rgba(0.5,0.5,0.5,0.2)",
               }}
+              className="Card__container"
             >
               <span>{Product.title}</span>
               <img

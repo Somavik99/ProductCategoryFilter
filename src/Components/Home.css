@@ -1,0 +1,10 @@
+.Card__container {
+  background-image: linear-gradient(
+    to bottom,
+    #e4e7ec,
+    #dcdee2,
+    #d5d5d8,
+    #ccccce,
+    #c4c4c4
+  );
+}

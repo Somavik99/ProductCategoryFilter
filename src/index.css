@@ -3,3 +3,14 @@
 * {
   font-family: "Exo 2", sans-serif;
 }
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #061a39,
+    #09162e,
+    #0a1123,
+    #060b18,
+    #01030b
+  );
+}
