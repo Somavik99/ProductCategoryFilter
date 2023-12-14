@@ -4,6 +4,7 @@ import Search from "./Search";
 // import SIdeBar from "./SideBar/SIdeBar";
 import "./Home.css";
 import CategoryFilter from "./CatagoryFilter/CatagoryFilter";
+import FilterRange from "./FilterRange/FilterRange";
 
 const Home = () => {
   const [ProductsState, setProductsState] = useState([]);
@@ -34,8 +35,9 @@ const Home = () => {
       <div style={{ margin: "20px", width: "100%" }}>
         <Search Products={ProductsState} />
       </div>
-      <div>
+      <div style={{display:"flex", justifyContent:"space-between",alignItems:"center"}}>
         <CategoryFilter ProductsCategoryState={ProductsState} />
+       <span style={{marginRight:"5%",border:"1px solid gray",height:"5vh",width:"5vh",textAlign:"center",borderRadius:"8px"}}><FilterRange /></span> 
       </div>
       <div
         style={{
