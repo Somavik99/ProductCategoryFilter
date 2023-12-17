@@ -8,3 +8,17 @@
     #c4c4c4
   );
 }
+
+.FilterRange__block{
+  margin-right: 5%;
+  border: 1px solid gray;
+  height: 5vh;
+  width: 5vh;
+  text-align: center;
+  border-radius: 8px;
+  outline: none;
+}
+
+.FilterRange__block:focus{
+outline: 1px solid rgb(24, 29, 38);
+}

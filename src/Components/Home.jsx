@@ -46,13 +46,9 @@ const Home = () => {
         <CategoryFilter ProductsCategoryState={ProductsState} />
         <span
           style={{
-            marginRight: "5%",
-            border: "1px solid gray",
-            height: "5vh",
-            width: "5vh",
-            textAlign: "center",
-            borderRadius: "8px",
+           
           }}
+          className="FilterRange__block"
         >
           <FilterRange />
         </span>
