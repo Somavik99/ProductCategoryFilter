@@ -42,7 +42,7 @@ const CategoryFilter = ({ ProductsCategoryState }) => {
             return (
               <div key={ind}>
                 <div>
-                  <img src={Item.image} alt="Category Image" />
+                  <img src={Item.image} alt="Category Image" style={{mixBlendMode:"multiply",filter:"contrast(1)"}}/>
                 </div>
               </div>
             );

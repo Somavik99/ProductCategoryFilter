@@ -88,7 +88,7 @@ const Home = () => {
               <img
                 src={Product.image}
                 alt="ProductImage"
-                style={{ height: "10vw", width: "10vw" }}
+                style={{ height: "10vw", width: "10vw" ,mixBlendMode:"multiply"}}
               />
 
               <div style={{ height: "3vh", width: "0.5vw" }}>
