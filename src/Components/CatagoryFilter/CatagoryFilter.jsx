@@ -1,5 +1,6 @@
-import useFilterHook from "./useFilterHook";4
-import "./CategoryFilter.css"
+import useCategoryFilterHook from "./useCategoryFilterHook";
+4;
+import "./CategoryFilter.css";
 
 const CategoryFilter = ({ ProductsCategoryState }) => {
   const {
@@ -7,7 +8,7 @@ const CategoryFilter = ({ ProductsCategoryState }) => {
     CategoryProductItems,
     FilteredProducts,
     IsClicked,
-  } = useFilterHook({
+  } = useCategoryFilterHook({
     Products: ProductsCategoryState,
   });
 
@@ -42,7 +43,11 @@ const CategoryFilter = ({ ProductsCategoryState }) => {
             return (
               <div key={ind}>
                 <div>
-                  <img src={Item.image} alt="Category Image" style={{mixBlendMode:"multiply",filter:"contrast(1)"}}/>
+                  <img
+                    src={Item.image}
+                    alt="Category Image"
+                    style={{ mixBlendMode: "multiply", filter: "contrast(1)" }}
+                  />
                 </div>
               </div>
             );

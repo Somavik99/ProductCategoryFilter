@@ -1,23 +1,21 @@
 import { useState } from "react";
 
+const useFilterRange = ({ ProductsState }) => {
+  const [IsRange, setIsRange] = useState(false);
+  const [AmountRange, setAmountRange] = useState(0);
 
-const useFilterRange = ({ProductsState}) => {
+  const FilterProductAmountChange = async (ProductPriceAmount) => {
+    const FilteredProductPrice = ProductsState.filter((ProductPrice) => {
+      return ProductPrice.price === ProductPriceAmount;
+    });
+    setAmountRange(FilteredProductPrice);
+  };
 
-    const [IsRange, setIsRange] = useState(false);
-    const [AmountRange, setAmountRange] = useState(0);
-  
-    const FilterProductAmountChange = (ProductPriceAmount) => {
-      const FilteredProductPrice = ProductsState.filter((ProductPrice) => {
-        return Number(ProductPrice.price) === ProductPriceAmount;
-      });
-      setAmountRange(FilteredProductPrice);
-    };
-  
-    const ShowRangeBar = () => {
-      setIsRange(() => !IsRange);
-    };
+  const ShowRangeBar = () => {
+    setIsRange(() => !IsRange);
+  };
 
-  return {ShowRangeBar, AmountRange, IsRange,FilterProductAmountChange}
-}
+  return { ShowRangeBar, AmountRange, IsRange, FilterProductAmountChange };
+};
 
-export default useFilterRange
+export default useFilterRange;
