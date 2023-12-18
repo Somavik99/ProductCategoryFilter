@@ -8,7 +8,7 @@ import FilterRange from "./FilterRange/FilterRange";
 
 const Home = () => {
   const [ProductsState, setProductsState] = useState([]);
-  const [IsRange, setIsRange] = useState(false);
+
 
   const FetchPProductsData = async () => {
     try {
@@ -28,9 +28,8 @@ const Home = () => {
 
   if (!Array.isArray(ProductsState)) return null;
 
-  const ShowRangeBar = () => {
-    setIsRange(() => !IsRange);
-  };
+
+
 
   return (
     <div style={{ position: "relative" }}>
@@ -49,14 +48,10 @@ const Home = () => {
         }}
       >
         <CategoryFilter ProductsCategoryState={ProductsState} />
-        <div onClick={ShowRangeBar} className="FilterRange__block">
-          <FilterRange />
-          {IsRange ? (
-            <div className="Range__Bar">
-              <input type="range" name="RangeFIlter" />
-            </div>
-          ) : null}
+        <div  className="FilterRange__block">
+          <FilterRange ProductsState={ProductsState} />
         </div>
+       
       </div>
       <div
         style={{
