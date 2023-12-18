@@ -8,6 +8,7 @@ import FilterRange from "./FilterRange/FilterRange";
 
 const Home = () => {
   const [ProductsState, setProductsState] = useState([]);
+  const [IsRange, setIsRange] = useState(false);
 
   const FetchPProductsData = async () => {
     try {
@@ -27,6 +28,10 @@ const Home = () => {
 
   if (!Array.isArray(ProductsState)) return null;
 
+  const ShowRangeBar = () => {
+    setIsRange(() => !IsRange);
+  };
+
   return (
     <div style={{ position: "relative" }}>
       {/* <div style={{ position: "absolute" }}>
@@ -44,11 +49,13 @@ const Home = () => {
         }}
       >
         <CategoryFilter ProductsCategoryState={ProductsState} />
-        <div
-
-          className="FilterRange__block"
-        >
+        <div onClick={ShowRangeBar} className="FilterRange__block">
           <FilterRange />
+          {IsRange ? (
+            <div className="Range__Bar">
+              <input type="range" name="RangeFIlter" />
+            </div>
+          ) : null}
         </div>
       </div>
       <div
@@ -82,7 +89,11 @@ const Home = () => {
               <img
                 src={Product.image}
                 alt="ProductImage"
-                style={{ height: "10vw", width: "10vw" ,mixBlendMode:"multiply"}}
+                style={{
+                  height: "10vw",
+                  width: "10vw",
+                  mixBlendMode: "multiply",
+                }}
               />
 
               <div style={{ height: "3vh", width: "0.5vw" }}>

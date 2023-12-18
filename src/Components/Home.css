@@ -9,7 +9,7 @@
   );
 }
 
-.FilterRange__block{
+.FilterRange__block {
   margin-right: 5%;
   border: 1px solid gray;
   height: 5vh;
@@ -19,6 +19,14 @@
   outline: none;
 }
 
-.FilterRange__block:focus{
-outline: 1px solid rgb(24, 29, 38);
+
+
+.Range__Bar {
+  margin-right: 5%;
+  border: 1px solid black;
+  width: fit-content;
+}
+
+.FilterRange__block:focus {
+  outline: 1px solid rgb(24, 29, 38);
 }
