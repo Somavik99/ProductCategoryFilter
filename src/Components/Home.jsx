@@ -44,14 +44,12 @@ const Home = () => {
         }}
       >
         <CategoryFilter ProductsCategoryState={ProductsState} />
-        <span
-          style={{
-           
-          }}
+        <div
+
           className="FilterRange__block"
         >
           <FilterRange />
-        </span>
+        </div>
       </div>
       <div
         style={{
